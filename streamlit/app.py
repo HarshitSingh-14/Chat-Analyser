@@ -1,6 +1,6 @@
 import streamlit as st
 import preprocessing, functions
-
+import matplotlib.pyplot as plt
 
 st.sidebar.title("Chat Analyser" )
 
@@ -38,3 +38,17 @@ if uploaded_file is not None:
             st.title(links)
 
 
+    if selected_user=='Complete Group Analysis':
+        st.title('Most Active Users')
+        x ,df_active= functions.most_active(df)
+        fig,ax = plt.subplots()
+
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            ax.bar(x.index, x.values)
+            plt.xticks(rotation='vertical')
+            st.pyplot(fig)
+        with col2:
+            st.dataframe(df_active)

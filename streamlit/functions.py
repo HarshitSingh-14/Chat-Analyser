@@ -31,3 +31,9 @@ def fetch_stats(selected_user, df):
         links.extend(extractor.find_urls(message))
     return num_messages, len(words),len(links)
 
+
+
+def most_active(df):
+    x=df['user'].value_counts()
+    df_active = round((df['user'].value_counts() / df.shape[0]) * 100, 2).reset_index().rename(columns={'index': 'name ' ,'user': 'percent'})
+    return x, df_active
