@@ -5,7 +5,7 @@
 -----------------
 ## To Try my WebApp
 
-1) Link to my Chat Analyser deployed on heroku [Chat Analyser](https://chat-analyser-byhs.herokuapp.com/).
+1) Link to my Chat Analyser deployed on heroku [Chat Analyser[LINK]](https://chat-analyser-byhs.herokuapp.com/).
 
 2) Export the chat file gained from WhatsApp/Telegram 
 
